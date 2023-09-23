@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Successful</title>
+    <link rel="stylesheet" href="style.css">
+    <link
+      href="https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css"
+      rel="stylesheet"
+    />
+</head>
+<body>
+    <div class="s_container">
+        <div class="logo">
+            <i class='bx bxs-checkbox-checked'></i>
+        </div>
+        <div class="content">
+        <h2>Login successfully!</h2>
+        <p>Your email: <span id="userEmail"></span></p>
+    </div>
+       <a href="Login.html"><button id="Logout">Logout</button></a>
+
+    </div>
+
+    <script>
+        var userEmailSpan = document.getElementById("userEmail");
+        var userEmail = localStorage.getItem('userEmail');
+        if (userEmail) {
+            userEmailSpan.textContent = userEmail;
+        }
+    </script>
+   
+</body>
+</html>
